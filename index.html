@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RAWDER</title>
+
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="public/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans">
+<link rel="stylesheet" type="text/css" href="public/css/animate.min.css">
+<script src="public/scripts/wow.min.js"></script>
+<script>
+    new WOW().init();
+    </script>
+    
+</head>
+<body ng-app="MyApp">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <a class="navbar-brand wow fadeInLeftBig" href="#">RAWDER</a>
+    </div>
+	<div class="container">
+     <ul class="nav navbar-nav">
+         <li class="active index">
+             <a class="toplist" href="#">Home</a>
+         </li>
+         <li class="">
+             <a href="#main">About US</a>
+         </li>
+         <li class="">
+             <a href="#about">How it Works</a>
+         </li>
+         <li class="">
+             <a ng-href="#">Services</a>
+         </li>
+         <li class="">
+             <a ng-href="#contact">Contact Us</a>
+         </li>
+         <li></li>
+     </ul>
+    <ul class="nav navbar-nav navbar-right">
+         <button class="btn btn-primary navbar-btn"><a href="#login" style="text-decoration:none;color:white;padding-right:1px;">Login</a></button>
+         <button class="btn btn-primary navbar-btn"><a href="#register" style="text-decoration:none;color:white">Register</a></button></ul>
+  </div>
+    
+</nav>
+<div class="row" style="padding-top:60px">
+ 
+<div class="col-md-4 pull-left"><img class="img img-responsive wow rotateInDownLeft" style="padding-left:10px;padding-top:5px" src="public/assets/logo200x200.png">  </div>
+<div class="col-md-5"><h1 class="center" style="font-size:1000%;-vendor-animation-duration: 3s;">RAWDER</h1></div>
+</div> 
+<hr>
+<div class="wow fadeInLeftBig">
+<ng-view>
+</ng-view>
+</div>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="public/scripts/app.js"></script>
+<script type="text/javascript" src="public/scripts/controllers/RegistrationController.js"></script>
+<script type="text/javascript" src="public/scripts/services/UserService.js"></script>
+<script src="public/scripts/gmaps.min.js"></script>
+    <script>
+ $(document).ready(function(){
+      
+      var url = GMaps.staticMapURL({
+        size: [610, 300],
+        lat: -12.043333,
+        lng: -77.028333
+      });
+      $('<img/>').attr('src', url).appendTo('#map');
+    });
+</script>
+</body>
+</html>

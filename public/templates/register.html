@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4"><h3>Register</h3><hr></div>
+</div>
+<div class="row" ng-controller="registrationController">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="form">
+			<label for="org_name">Organization Name:</label>
+			<input type="text" id="org_name" ng-model="user.org_name" placeholder="organisation name" class="form-control"><br>
+			<label for="first_name">First Name:</label>
+			<input type="text" id="first_name" placeholder="first name" ng-model="user.fname" class="form-control"><br>
+			<label for="last_name">last Name:</label>
+			<input type="text" id="last_name" placeholder="last name" ng-model="user.lname" class="form-control"><br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" placeholder="email" ng-model="user.email" class="form-control"><br>
+			<label for="pwd">Password:</label>
+			<input type="password" id="pwd" placeholder="password" ng-model="user.password" class="form-control"><br>
+			<label for="repwd">Reenter Password:</label>
+			<input type="password" id="repwd" placeholder="password" ng-model="user.repassword" class="form-control"><br>
+			<input type="button" id="register" value="Register" ng-click="getUserDetails(user);console.log(user);alert('hello')" class="form-control">
+		</form>
+	</div>
+</div>

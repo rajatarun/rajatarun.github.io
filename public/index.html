@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RAWDER</title>
+
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="public/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans">
+
+</head>
+<body ng-app="MyApp">
+<div class="row">
+ 
+<div class="col-md-4 pull-left"><img class="img img-responsive" style="padding-left:10px;padding-top:5px" src="public/assets/logo200x200.png">  </div>
+<div class="col-md-5"><h1 class="center" style="font-size:1000%">RAWDER</h1></div>
+<div class="col-md-3 pull-right" align="right" style="padding-top:10px">
+  <h2>
+    <span class="label label-info"><a href="#login" style="text-decoration:none;color:white;padding-right:1px;">Login</a></span>
+    <span class="label label-info"><a href="#register" style="text-decoration:none;color:white">Register</a></span>
+  </h2>
+</div>
+</div> 
+<hr>
+<nav class="navbar navbar-default">
+	<div class="container">
+     <ul class="nav navbar-nav">
+         <li class="active index">
+             <a class="toplist" href="#">Home</a>
+         </li>
+         <li class="">
+             <a href="#main">About US</a>
+         </li>
+         <li class="">
+             <a href="#about">How it Works</a>
+         </li>
+         <li class="">
+             <a ng-href="#">Services</a>
+         </li>
+         <li class="">
+             <a ng-href="#">Contact Us</a>
+         </li>
+     </ul>
+  </div>
+</nav>
+<ng-view>
+</ng-view>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+
+<script type="text/javascript" src="public/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "rawder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatarun/rajatarun.github.io.git"
+  },
+    "dependencies": {
+        "express" : "~4.5.1",
+        "mongoose" : "~3.8.0",
+        "body-parser" : "~1.4.2",
+        "method-override" : "~2.0.2"        
+      },
+  "author": "tarun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajatarun/rajatarun.github.io/issues"
+  },
+  "homepage": "https://github.com/rajatarun/rajatarun.github.io#readme"
+}
