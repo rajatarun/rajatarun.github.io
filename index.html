@@ -12,6 +12,12 @@
 <script>
     new WOW().init();
     </script>
+
+<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>    
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/iron-form/iron-form.html">
+<link rel="import" href="bower_components/google-map/google-map.html">
     
 </head>
 <body ng-app="MyApp">
@@ -40,8 +46,10 @@
          <li></li>
      </ul>
     <ul class="nav navbar-nav navbar-right">
-         <button class="btn btn-primary navbar-btn"><a href="#login" style="text-decoration:none;color:white;padding-right:1px;">Login</a></button>
-         <button class="btn btn-primary navbar-btn"><a href="#register" style="text-decoration:none;color:white">Register</a></button></ul>
+         <!-- <button class="btn btn-primary navbar-btn"><a href="#login" style="text-decoration:none;color:white;padding-right:1px;">Login</a></button>
+         <button class="btn btn-primary navbar-btn"><a href="#register" style="text-decoration:none;color:white">Register</a></button></ul>-->
+        <paper-button raised><a href="#login" style="text-decoration:none;padding-right:1px;padding-top:5px;">Login</a></paper-button>
+        <paper-button raised><a href="#register" style="text-decoration:none;">Register</a></paper-button>
   </div>
     
 </nav>
@@ -59,8 +67,9 @@
 <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="public/scripts/app.js"></script>
-<script type="text/javascript" src="public/scripts/controllers/RegistrationController.js"></script>
 <script type="text/javascript" src="public/scripts/services/UserService.js"></script>
+<script type="text/javascript" src="public/scripts/controllers/RegistrationController.js"></script>
+
 <script src="public/scripts/gmaps.min.js"></script>
     <script>
  $(document).ready(function(){

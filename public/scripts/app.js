@@ -4,7 +4,8 @@
 	app.config(["$routeProvider",function($routeProvider,$locationProvider){
 		$routeProvider
 			.when('/main',{
-				templateUrl:"public/templates/main.html"
+				templateUrl:"public/templates/main.html",
+                
 			})
 			.when('/about',{
 				templateUrl:"public/templates/about.html"
@@ -13,7 +14,8 @@
 				templateUrl:"public/templates/login.html"
 			})
 			.when('/register',{
-				templateUrl:"public/templates/register.html"	
+				templateUrl:"public/templates/register.html",
+                controller:"registrationController"
 			})
         .when('/contact',{
             templateUrl:"public/templates/contact.html"

@@ -6,23 +6,29 @@
 <div class="row">
 	<div class="col-md-4"></div>
 	<div class="col-md-4">
-	<form class="form" action="api/nerd" method="post">
+	<form is="iron-form" class="form" action="api/nerd" method="post">
 		<div class="row">
-			<label for="username">Username</label>
-			<input type="text" name="username" class="form-control" id="username"></div>
-			<hr>
+			
+            <paper-input type="text" label="Username"></paper-input></div>
+			
 			<div class="row">
-				<label for="password">Password</label>
-				<input type="password" name="password" class="form-control" id="password"></div>
-				<hr>
+				
+				            <paper-input type="password" label="Password"></paper-input></div>
+
+			<hr>	
 				<div class="row">
-					
-					<div class="col-md-6">
-						<input type="submit" class="btn btn-default form-control" value="Login"></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-4">
+						<paper-button raised onclick="_submit(event)">Login</paper-button></div>
 					<div class="col-md-1"></div>
 						<div class="col-md-5">
-							<input type="button" class="btn btn-default form-control" value="Not a User?"></div>
+							<paper-button raised>Not a User?</paper-button></div>
 						</div>
 					</form> 
+        <script>
+          function _submit(event) {
+            Polymer.dom(event).localTarget.parentElement.submit();
+          }
+        </script>
 					</div>
 				</div>
