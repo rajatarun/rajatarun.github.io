@@ -7,7 +7,7 @@
 	<div class="col-xs-4 col-md-4"></div>
 	<div class="col-xs-4 col-md-4">
 		<form class="form" id="regForm">
-			<label for="org_name">Organization Name:</label>
+			<!-- <label for="org_name">Organization Name:</label>
 			<input type="text" id="org_name" ng-model="user.org_name" placeholder="organisation name" class="form-control"><br>
 			<label for="first_name">First Name:</label>
 			<input type="text" id="first_name" placeholder="first name" ng-model="user.fname" class="form-control"><br>
@@ -19,7 +19,19 @@
 			<input type="password" id="pwd" placeholder="password" ng-model="user.password" class="form-control"><br>
 			<label for="repwd">Reenter Password:</label>
 			<input type="password" id="repwd" placeholder="password" ng-model="user.repassword" class="form-control"><br>
-			<input type="button" id="register" value="Register" ng-click="getUserDetails(user)" class="form-control">
+			<input type="button" id="register" value="Register" ng-click="getUserDetails(user)" class="form-control">-->
+            
+            <paper-input type="text" ng-model="user.org_name" label="Organisation Name" ></paper-input>
+            <paper-input type="text" ng-model="user.fname" label="First Name" ></paper-input>
+            <paper-input type="text" ng-model="user.lname" label="Last Name" ></paper-input>
+            <paper-input type="email" ng-model="user.email" label="Email" ><div suffix>@email.com</div></paper-input>
+            <paper-input type="password" ng-model="user.password" label="Password" ></paper-input>
+            <paper-input type="password" ng-model="user.repassword" label="Re-enter Password"></paper-input>
+            <hr>
+            <center><paper-button raised ng-click="getUserDetails(user)">Register</paper-button></center>
+            
+            
+            
 		</form>
         <br>
         <div ng-show="action" class="alert alert-success" role="alert">
