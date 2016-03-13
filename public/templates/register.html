@@ -22,9 +22,9 @@
 			<input type="button" id="register" value="Register" ng-click="getUserDetails(user)" class="form-control">-->
             
             <paper-input type="text" ng-model="user.org_name" label="Organisation Name" ></paper-input>
-            <paper-input type="text" ng-model="user.fname" label="First Name" ></paper-input>
-            <paper-input type="text" ng-model="user.lname" label="Last Name" ></paper-input>
-            <paper-input type="email" ng-model="user.email" label="Email" ><div suffix>@email.com</div></paper-input>
+            <paper-input type="text" ng-model="user.fname" label="First Name" auto-validate pattern="[a-zA-Z]*" error-message="Letters only!"></paper-input>
+            <paper-input type="text" ng-model="user.lname" label="Last Name" auto-validate pattern="[a-zA-Z]*" error-message="Letters only!" ></paper-input>
+            <paper-input type="email" ng-model="user.email" label="Email" auto-validate pattern="[a-zA-Z0-9.]*@.*.[a-zA-Z]+" error-message="Enter valid Email"><div suffix>@email.com</div></paper-input>
             <paper-input type="password" ng-model="user.password" label="Password" ></paper-input>
             <paper-input type="password" ng-model="user.repassword" label="Re-enter Password"></paper-input>
             <hr>
