@@ -1,10 +1,8 @@
-(function () {
-    'use strict';
-	var app = angular.module("MyApp",["ngRoute","RegistrationController"]);
-	app.config(["$routeProvider",function($routeProvider,$locationProvider){
+angular.module("MyApp",['ngRoute','RegistrationController','ContactController','ng-polymer-elements'])
+    .config(["$routeProvider",function($routeProvider,$locationProvider){
 		$routeProvider
 			.when('/main',{
-				templateUrl:"public/templates/main.html",
+				templateUrl:"public/templates/main.html"
                 
 			})
 			.when('/about',{
@@ -15,17 +13,16 @@
 			})
 			.when('/register',{
 				templateUrl:"public/templates/register.html",
-                controller:"registrationController"
+                controller:'RegController'
 			})
         .when('/contact',{
-            templateUrl:"public/templates/contact.html"
-        })
+            templateUrl:"public/templates/contact.html",
+            controller:'CntctController'
+        });
+        
 
-	}]);
-	app.controller('mainCntrl',function($routeParams,$scope,$http)
+	}])
+	.controller('mainCntrl',function($routeParams,$scope,$http)
 	{
 		this.params = $routeParams;
 	});
-
-
-})();

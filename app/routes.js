@@ -1,4 +1,5 @@
 var Nerd = require('./models/nerd');
+var contact = require('./models/contact');
 
     module.exports = function(app) {
 
@@ -19,11 +20,20 @@ var Nerd = require('./models/nerd');
                 res.json(nerds); // return all nerds in JSON format
             });
         });
-        app.post('/api/nerd',function(req,res){
+        app.post('/api/nerds',function(req,res){
             console.log(req);
             
             var user = new Nerd({name:req.body.username,password:req.body.password});
             user.save(function(err){
+                if(err){
+                    res.send("invalid");
+                }
+                res.send("Sucess");
+            })
+        });
+        app.post('/api/contact',function(req,res){
+            var conta = new contact({name:req.body.name,email:req.body.email});
+            conta.save(function(err){
                 if(err){
                     res.send("invalid");
                 }

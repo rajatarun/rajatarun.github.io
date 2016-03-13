@@ -1,23 +1,33 @@
-<div class="row">
-<google-map latitude="37.77493" longitude="-122.41942"></google-map>
-</div>
-<div class="row">
+
+<div class="row" ng-controller="CntctController">
 <div class="col-xs-4 col-md-4"></div>
 <div class="col-xs-4 col-md-4">
     <strong><h3>Contact</h3></strong>
     <hr>
     <form>
     
-    <paper-input type="text" label="Name"></paper-input>
-    <paper-input label="username" id="inputWithButton">
+    <paper-input type="text" label="Name" ng-model="comment.name"></paper-input>
+    <paper-input label="Email" ng-model="comment.email" id="inputWithButton">
         <div suffix>@email.com</div>
         </paper-input>
+    <paper-button raised ng-click="postusercontact(comment)">Submit</paper-button>
     </form>
+    <div ng-show="action1" class="alert alert-success" role="alert">
+            <h2><span class="glyphicon glyphicon-ok"></span>&nbsp;Someone will contact you soon</h2>
+            
     </div>
+    </div>
+</div>
+<hr>
+<br>
+<div class="row">
+<center><google-map latitude="37.77493" longitude="-122.41942" disableDefaultUi disableZoom></google-map></center>
 </div>
 <style>
   google-map {
     height: 70vh;
+    
+    
     padding-right: 20px;  
   }
 </style>
