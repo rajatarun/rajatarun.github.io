@@ -10,7 +10,9 @@
     <paper-input label="Email" ng-model="comment.email" id="inputWithButton">
         <div suffix>@email.com</div>
         </paper-input>
-    <paper-button raised ng-click="postusercontact(comment)">Submit</paper-button>
+    <hr>
+    <div class="row">
+    <center><paper-button raised ng-click="postusercontact(comment)">Submit</paper-button></center></div>
     </form>
     <div ng-show="action1" class="alert alert-success" role="alert">
             <h2><span class="glyphicon glyphicon-ok"></span>&nbsp;Someone will contact you soon</h2>
