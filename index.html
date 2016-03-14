@@ -23,7 +23,7 @@
 </head>
 <body ng-app="MyApp" style="background-image:url('public/assets/completebackground.svg');background-size:100%;background-repeat: repeat-y;z-index:-1">
 
-<nav class="navbar navbar-default" style="background:rgba(0,0,0,0);border-style:hidden;z-index:3">
+<nav class="navbar navbar-default nav-bottom" style="background:rgba(0,0,0,0);border-style:hidden;z-index:3">
     <div class="navbar-header">
         <a class="navbar-brand wow fadeInLeftBig" href="#">RAWDER</a>
     </div>
@@ -74,6 +74,33 @@
 <ng-view>
 </ng-view>
 </div>
+<footer style="background-image:url('public/assets/footer.svg');background-size:100%;background-repeat: repeat-y;z-index:3">
+<div class="container" style="height:150px;">
+<nav class="navbar navbar-default navbar-inverse" style="background:rgba(0,0,0,0);border-style:hidden;z-index:3;">
+	
+     <ul class="nav navbar-nav">
+         <li class="index">
+             <a class="toplist" href="#">Home</a>
+         </li>
+         <li class="">
+             <a href="#main">About US</a>
+         </li>
+         <li class="">
+             <a href="#about">How it Works</a>
+         </li>
+         <li class="">
+             <a ng-href="#">Services</a>
+         </li>
+         <li class="">
+             <a ng-href="#contact">Contact Us</a>
+         </li>
+         <li></li>
+     </ul>
+ 
+    
+</nav>
+</div>
+</footer>
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
