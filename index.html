@@ -23,13 +23,13 @@
 </head>
 <body ng-app="MyApp" style="background-image:url('public/assets/completebackground.svg');background-size:100%;background-repeat: repeat-y;z-index:-1">
 
-<nav class="navbar navbar-default" style="background:rgba(0,0,0,0);border-style:hidden">
+<nav class="navbar navbar-default navbar-fixed-top" style="background:rgba(0,0,0,0);border-style:hidden;z-index:3">
     <div class="navbar-header">
         <a class="navbar-brand wow fadeInLeftBig" href="#">RAWDER</a>
     </div>
 	<div class="container">
      <ul class="nav navbar-nav">
-         <li class="active index">
+         <li class="index">
              <a class="toplist" href="#">Home</a>
          </li>
          <li class="">
@@ -70,7 +70,7 @@
 </div> 
 <br>
 <br>
-<div class="wow fadeInLeftBig" style="background-size:100%;background-repeat: no-repeat;z-index:3">
+<div class="wow fadeInLeftBig" style="background-size:100%;background-repeat: no-repeat;z-index:2">
 <ng-view>
 </ng-view>
 </div>
