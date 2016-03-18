@@ -1,7 +1,7 @@
 
-var RegistrationController= angular.module("RegistrationController",[]);
+angular.module("RegistrationController",[])
 
-RegistrationController.factory("getUser",function($http){
+.factory('getUserData',function($http){
     return {
         "users":function(){
             return $http.get("/api/nerds").then(function(response){
@@ -16,12 +16,11 @@ RegistrationController.factory("getUser",function($http){
         }
     }
 })
-
-RegistrationController.controller("RegController",['getUser','$scope',function(getUser,$scope){
+.controller("RegController",['getUserData','$scope',function(getUserData,$scope){
     
         $scope.getUserDetails=function(userdata){
             console.log(userdata.fname);
-            getUser.setUser(userdata).then(function(response){
+            getUserData.setUser(userdata).then(function(response){
                 if(response==="Sucess"){
                     $scope.action = true;
                     angular.element("#regForm").reset();

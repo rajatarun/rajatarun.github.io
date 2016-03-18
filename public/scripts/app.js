@@ -1,4 +1,4 @@
-angular.module("MyApp",['ngRoute','RegistrationController','ContactController','ng-polymer-elements'])
+angular.module("MyApp",['ngRoute','RegistrationController','ContactController','ng-polymer-elements','loginController'])
     .config(["$routeProvider",function($routeProvider,$locationProvider){
 		$routeProvider
 			.when('/main',{
@@ -9,7 +9,8 @@ angular.module("MyApp",['ngRoute','RegistrationController','ContactController','
 				templateUrl:"public/templates/about.html"
 			})
 			.when('/login',{
-				templateUrl:"public/templates/login.html"
+				templateUrl:"public/templates/login.html",
+                controller:'lgnController'
 			})
 			.when('/register',{
 				templateUrl:"public/templates/register.html",

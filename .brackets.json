@@ -1,0 +1,24 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/raja/Desktop/Deepu/public/scripts/services/UserService.js",
+        "C:/Users/raja/Desktop/Deepu/public/scripts/services/LoginService.js",
+        "C:/Users/raja/Desktop/Deepu/public/scripts/controllers/RegistrationController.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/wrap.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/traversing.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/support.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/serialize.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/selector.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/selector-sizzle.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/selector-native.js",
+        "C:/Users/raja/Desktop/Deepu/public/scripts/controllers/ContactController.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/queue.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/outro.js",
+        "C:/Users/raja/Desktop/Deepu/public/scripts/controllers/LoginController.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/offset.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/manipulation.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/intro.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/jquery/src/event.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/bootstrap/dist/js/bootstrap.js",
+        "C:/Users/raja/Desktop/Deepu/bower_components/bootstrap/dist/js/bootstrap.min.js"
+    ]
+}

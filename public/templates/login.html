@@ -4,23 +4,23 @@
 	<div class="col-xs-4 col-md-4"></div>
 	<div class="col-xs-4 col-md-4"><h3>Login</h3><hr></div>
 </div>	
-<div class="row">
+<div class="row" ng-controller="lgnController">
 	<div class="col-xs-4 col-md-4"></div>
 	<div class="col-xs-4 col-md-4">
 	<form is="iron-form" class="form" action="api/nerd" method="post">
 		<div class="row">
 			
-            <paper-input type="text" label="Username"></paper-input></div>
+            <paper-input type="text" label="Username" ng-model="user.name"></paper-input></div>
 			
 			<div class="row">
 				
-				            <paper-input type="password" label="Password"></paper-input></div>
+				            <paper-input type="password" label="Password" ng-model="user.password"></paper-input></div>
 
 			<hr>	
 				<div class="row">
 					<div class="col-xs-2 col-md-2"></div>
 					<div class="col-xs-4 col-md-4">
-						<paper-button raised onclick="_submit(event)">Login</paper-button></div>
+						<paper-button raised ng-click="submit(user)">Login</paper-button></div>
 					<div class="col-xs-1 col-md-1"></div>
 						<div class="col-xs-5 col-md-5">
 							<paper-button raised>Not a User?</paper-button></div>

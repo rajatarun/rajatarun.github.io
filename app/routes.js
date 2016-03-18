@@ -1,3 +1,4 @@
+'use strict'
 var Nerd = require('./models/nerd');
 var contact = require('./models/contact');
 
@@ -8,7 +9,7 @@ var contact = require('./models/contact');
         // authentication routes
 
         // sample api route
-        app.get('/api/nerds', function(req, res) {
+        app.post('/api/login', function(req, res) {
             // use mongoose to get all nerds in the database
             Nerd.find(function(err, nerds) {
 
@@ -16,14 +17,25 @@ var contact = require('./models/contact');
                                 // nothing after res.send(err) will execute
                 if (err)
                     res.send(err);
-
-                res.json(nerds); // return all nerds in JSON format
+                for(let val of nerds){
+                    console.log(val)
+                    if(val.name == req.body.name && val.password == req.body.password){
+                        res.send("success");        
+                    }
+                }
+                
+                //res.json(nerds); // return all nerds in JSON format
             });
         });
         app.post('/api/nerds',function(req,res){
-            console.log(req);
+            console.log(req.body);
             
-            var user = new Nerd({name:req.body.username,password:req.body.password});
+            var user = new Nerd({name:req.body.fname+" "+req.body.lname,password:req.body.password});
+            Nerd.find({name:req.body.username}).
+            where('name').equals(req.body.username).
+            exec(function(err,docs){
+                console.log(docs)
+            })
             user.save(function(err){
                 if(err){
                     res.send("invalid");
@@ -32,6 +44,7 @@ var contact = require('./models/contact');
             })
         });
         app.post('/api/contact',function(req,res){
+            console.log(req)
             var conta = new contact({name:req.body.name,email:req.body.email});
             conta.save(function(err){
                 if(err){
