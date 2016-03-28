@@ -1,16 +1,26 @@
-angular.module("loginController",[])
-        
-        .controller("lgnController",['getUser','$scope',function(getUser,$scope){
+angular.module("app")
+        .controller("lgnController",['getUserFactory','$scope',function(getUserFactory,$scope){
+            $scope.form = true;
     $scope.submit= function(user){
-        console.log(getUser.list(user));
+        console.log(getUserFactory.name);
+        getUserFactory.list(user).then(function(dat){
+            getUserFactory.name = dat.name; 
+            console.log(getUserFactory.name);
+            $scope.name = getUserFactory.name;
+            console.log(dat);
+            $scope.form = false;
+            getUserFactory.Active= true;
+            console.log(getUserFactory.Active);
+        });
     }
-}])
-.factory("getUser",function($http){
-    return{
-        list:function(user){
-            return $http.post("/api/login",user).then(function(response){
-                return response.data
-            })
+    if(getUserFactory.Active){
+            
+            console.log(getUserFactory.name);
+            //angular.element(".log").html(data);
         }
+    else{
+        $scope.form = true;
     }
-})
+    
+}])
+      

@@ -1,12 +1,14 @@
 <br>
-<div class="row" >
+<div class="row" ng-controller="lgnController">
+<div class="log" ng-show="form">
 <div class="row">
 	<div class="col-xs-4 col-md-4"></div>
 	<div class="col-xs-4 col-md-4"><h3>Login</h3><hr></div>
 </div>	
-<div class="row" ng-controller="lgnController">
+<div class="row" >
 	<div class="col-xs-4 col-md-4"></div>
 	<div class="col-xs-4 col-md-4">
+    
 	<form is="iron-form" class="form" action="api/nerd" method="post">
 		<div class="row">
 			
@@ -26,11 +28,15 @@
 							<paper-button raised>Not a User?</paper-button></div>
 						</div>
 					</form> 
-        <script>
-          function _submit(event) {
-            Polymer.dom(event).localTarget.parentElement.submit();
-          }
-        </script>
+    </div>
+        
 					</div>
 				</div>
+<div class="row">
+<div class="col-md-4 col-xs-4"></div>
+<div class="col-md-4 col-xs-4" ng-hide="form">
+    <h1>{{name}}</h1>
+    </div>
+    
+    </div>
 </div>

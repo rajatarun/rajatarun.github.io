@@ -1,6 +1,9 @@
-angular.module("MyApp",['ngRoute','RegistrationController','ContactController','ng-polymer-elements','loginController'])
+angular.module("app",['ngRoute','RegistrationController','ContactController','ng-polymer-elements'])
     .config(["$routeProvider",function($routeProvider,$locationProvider){
 		$routeProvider
+            .when('/',{
+                controller:'mainCntrl'
+            })
 			.when('/main',{
 				templateUrl:"public/templates/main.html"
                 
@@ -23,7 +26,14 @@ angular.module("MyApp",['ngRoute','RegistrationController','ContactController','
         
 
 	}])
-	.controller('mainCntrl',function($routeParams,$scope,$http)
+	.controller('mainCntrl',['$routeParams','$scope','$http','getUserFactory',function(getUserFactory,$routeParams,$scope,$http)
 	{
 		this.params = $routeParams;
-	});
+        $scope.test = true;
+        if(getUserFactory.Active){
+            $scope.test = false;
+            console.log(getUserFactory.name);
+            $scope.name = getUserFactory.name;
+        }
+       
+	}]);

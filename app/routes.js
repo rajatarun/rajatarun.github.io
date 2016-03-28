@@ -1,6 +1,10 @@
 'use strict'
 var Nerd = require('./models/nerd');
 var contact = require('./models/contact');
+var jade = require('jade');
+var fs = require('fs');
+
+
 
     module.exports = function(app) {
 
@@ -9,6 +13,7 @@ var contact = require('./models/contact');
         // authentication routes
 
         // sample api route
+        
         app.post('/api/login', function(req, res) {
             // use mongoose to get all nerds in the database
             Nerd.find(function(err, nerds) {
@@ -18,9 +23,16 @@ var contact = require('./models/contact');
                 if (err)
                     res.send(err);
                 for(let val of nerds){
-                    console.log(val)
+                    
                     if(val.name == req.body.name && val.password == req.body.password){
-                        res.send("success");        
+                        fs.readFile('./app/templates/login.jade','utf8',function(err,data){
+                            if(err){
+                                console.log(err);
+                            }
+                            var html = jade.compile(data);
+                            var out = html({user:val.name});
+                            res.json(val);        
+                            })
                     }
                 }
                 

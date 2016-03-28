@@ -21,8 +21,8 @@
 <link rel="import" href="bower_components/google-map/google-map.html">
     
 </head>
-<body ng-app="MyApp" style="background-image:url('public/assets/completebackground.svg');background-size:100%;background-repeat: repeat-y;z-index:-1">
-
+<body ng-app="app" style="background-image:url('public/assets/completebackground.svg');background-size:100%;background-repeat: repeat-y;z-index:-1">
+<div ng-controller="mainCntrl" ng-init="test=true">
 <nav class="navbar navbar-default nav-bottom" style="background:rgba(0,0,0,0);border-style:hidden;z-index:3">
     <div class="navbar-header">
         <a class="navbar-brand wow fadeInLeftBig" href="#">RAWDER</a>
@@ -46,14 +46,17 @@
          </li>
          <li></li>
      </ul>
+    <div ng-show="test">
     <ul class="nav navbar-nav navbar-right">
          <!-- <button class="btn btn-primary navbar-btn"><a href="#login" style="text-decoration:none;color:white;padding-right:1px;">Login</a></button>
          <button class="btn btn-primary navbar-btn"><a href="#register" style="text-decoration:none;color:white">Register</a></button></ul>-->
         <paper-button raised><a href="#login" style="text-decoration:none;padding-right:1px;padding-top:5px;">Login</a></paper-button>
-        <paper-button raised><a href="#register" style="text-decoration:none;">Register</a></paper-button></ul>
+        <paper-button raised><a href="#register" style="text-decoration:none;">Register</a></paper-button></ul></div>
+    
   </div>
     
 </nav>
+    </div>
 <div class="row" style="padding-top:60px;">
 <div class="col-xs-1 col-md-1"></div>
  <!-- <div class="col-xs-3 col-md-3 pull-left"><img class="img img-responsive wow rotateInDownLeft" style="padding-left:10px;padding-top:5px" src="public/assets/logo200x200.png">  </div>
@@ -110,10 +113,11 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/ng-polymer-elements/ng-polymer-elements.min.js">col-xs-1 </script>
 <script type="text/javascript" src="public/scripts/controllers/ContactController.js"></script>
-<script type="text/javascript" src="public/scripts/services/UserService.js"></script>
 <script type="text/javascript" src="public/scripts/controllers/RegistrationController.js"></script>
-<script type="text/javascript" src="public/scripts/controllers/LoginController.js"></script>
 <script type="text/javascript" src="public/scripts/app.js"></script>
+<script type="text/javascript" src="public/scripts/services/UserService.js"></script>
+<script type="text/javascript" src="public/scripts/controllers/LoginController.js"></script>
+
 <script src="public/scripts/gmaps.min.js"></script>
     <script>
  $(document).ready(function(){
